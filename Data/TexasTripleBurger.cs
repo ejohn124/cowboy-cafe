@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Emma Johnson
+ * Class: TexasTripleBurger
+ * Purpose: Implement a class representing the Texas Triple Burger entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

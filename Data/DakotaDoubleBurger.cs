@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Emma Johnson
+ * Class: DakotaDoubleBurger
+ * Purpose: Implement a class representing the Dakota Double Burdger entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

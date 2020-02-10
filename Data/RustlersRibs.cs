@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Emma Johnson
+ * Class: RustersRibs
+ * Purpose: Implement a class representing the Rustler's Ribs entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

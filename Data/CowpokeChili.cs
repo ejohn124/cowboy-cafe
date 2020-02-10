@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Emma Johnson
+ * Class: Cowpoke Chili
+ * Purpose: Implement a class representing the Cowpoke Chili entree
+ */
+using System;
 using System.Collections.Generic;
 
 namespace CowboyCafe.Data

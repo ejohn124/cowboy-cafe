@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Emma Johnson
+ * Class: Side
+ * Purpose: Implement a base class for side items
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

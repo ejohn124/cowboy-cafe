@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Emma Johnson
- * Class: Corn Dodgers
- * Purpose: Implement a class representing the Corn Dodgers side
+ * Class: Baked Beans
+ * Purpose: To implement a class representing the baked beans side
  */
 using System;
 using System.Collections.Generic;
@@ -10,12 +10,12 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// Class representing Corn Dodgers
+    /// Class representing the Baked Beans side
     /// </summary>
-    public class CornDodgers: Side
+    public class BakedBeans: Side
     {
         /// <summary>
-        /// Calories of Corn Dodgers
+        /// Calories of the Baked Beans
         /// </summary>
         public override uint Calories
         {
@@ -24,11 +24,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Large:
-                        return 717;
+                        return 410;
                     case Size.Medium:
-                        return 685;
+                        return 378;
                     case Size.Small:
-                        return 512;
+                        return 312;
                     default:
                         throw new NotImplementedException("Unknown size");
                 }
@@ -37,7 +37,7 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// Price of Corn Dodgers
+        /// Price of the Baked Beans
         /// </summary>
         public override double Price
         {
@@ -54,7 +54,7 @@ namespace CowboyCafe.Data
                     default:
                         throw new NotImplementedException("Unknown size");
                 }
-                
+
             }
         }
     }

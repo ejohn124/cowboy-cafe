@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Emma Johnson
+ * Class: Entree
+ * Purpose: Implement a base class for the entree items
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

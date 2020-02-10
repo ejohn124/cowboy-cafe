@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Emma Johnson
+ * Class: PecosPulledPork
+ * Purpose: Implement a class representing the Pecos Pulled Pork entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

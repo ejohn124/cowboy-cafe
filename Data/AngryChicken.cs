@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Emma Johnson
+ * Class: Angry Chicken
+ * Purpose: Implement class representing the Angry Chicken entree
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
