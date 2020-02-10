@@ -7,12 +7,12 @@ namespace CowboyCafe.Data
     /// <summary>
     /// Class representing the Dakota Double entree
     /// </summary>
-    public class DakotaDoubleBurger
+    public class DakotaDoubleBurger: Entree
     {
         /// <summary>
         /// Price of the Dakota Double
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -23,7 +23,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Calories of the Dakota Double
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -75,7 +75,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the preperation of the Dakota Double Burger
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

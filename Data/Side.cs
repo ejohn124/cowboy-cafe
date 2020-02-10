@@ -10,7 +10,7 @@ namespace CowboyCafe.Data
     public abstract class Side
     {
         /// <summary>
-        /// Gets the size of the entree
+        /// Gets the size of the side
         /// </summary>
         public virtual Size Size { get; set; }
 
