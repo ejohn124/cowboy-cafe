@@ -57,6 +57,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Flavor of the Jerked Soda
+        /// </summary>
         public SodaFlavor Flavor { get; set; }
 
         /// <summary>
