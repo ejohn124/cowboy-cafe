@@ -20,7 +20,6 @@ namespace CowboyCafe.Data
         /// </summary>
         public bool RoomForCream { get; set; } = false;
 
-        public bool Decaf { get; set; }
         /// <summary>
         /// Calories of Coffee
         /// </summary>
@@ -85,5 +84,4 @@ namespace CowboyCafe.Data
         }
 
     }
-}
 }
