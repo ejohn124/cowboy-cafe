@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CowboyCafe.Data;
 
 namespace PointOfSale
 {
@@ -21,6 +22,22 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
+            AddPecosPulledPorkButton.Click += AddPecosPulledPorkButtonClick;
+        }
+
+        private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new CowpokeChili());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void AddPecosPulledPorkButtonClick(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new PecosPulledPork());
         }
     }
 }
