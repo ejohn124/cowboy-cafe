@@ -39,5 +39,10 @@ namespace PointOfSale
         {
             OrderList.Items.Add(new PecosPulledPork());
         }
+
+        public void AddCornDodgersButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
