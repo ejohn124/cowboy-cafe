@@ -101,6 +101,15 @@ namespace CowboyCafe.Data
         {
             return "Rustler's Ribs";
         }
+
+        /// <summary>
+        /// Override of to string to correctly display Cowpoke Chili name
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Cowpoke Chili";
+        }
     }
 }
 

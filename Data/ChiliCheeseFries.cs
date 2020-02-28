@@ -56,5 +56,14 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
+        /// <summary>
+        /// Override of to string to correctly display Chili Cheese Fries name
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Chili Cheese Fries";
+        }
     }
 }

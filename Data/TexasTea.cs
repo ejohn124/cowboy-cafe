@@ -95,5 +95,14 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Override of to string to correctly display Texas Tea Name
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Texas Tea";
+        }
+
     }
 }

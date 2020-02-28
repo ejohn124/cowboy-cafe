@@ -76,5 +76,14 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Override of to string to correctly display Jerked Soda name
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Jerked Soda";
+        }
+
     }
 }

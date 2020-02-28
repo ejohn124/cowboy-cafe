@@ -57,5 +57,14 @@ namespace CowboyCafe.Data
                 
             }
         }
+
+        /// <summary>
+        /// Override of to string to correctly display Corn Dodgers name
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Corn Dodgers";
+        }
     }
 }

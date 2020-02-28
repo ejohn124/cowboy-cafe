@@ -57,5 +57,14 @@ namespace CowboyCafe.Data
 
             }
         }
+
+        /// <summary>
+        /// Override of to string to correctly display Baked Beans name
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Baked Beans";
+        }
     }
 }

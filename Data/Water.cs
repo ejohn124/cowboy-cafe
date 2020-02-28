@@ -55,5 +55,14 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Override of to string to correctly display Water name
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Water";
+        }
+
     }
 }
