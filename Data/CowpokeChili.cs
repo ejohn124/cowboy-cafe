@@ -94,15 +94,6 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// Converts the object to a string
-        /// </summary>
-        /// <returns>The string "Rustler's Ribs"</returns>
-        public override string ToString()
-        {
-            return "Rustler's Ribs";
-        }
-
-        /// <summary>
         /// Override of to string to correctly display Cowpoke Chili name
         /// </summary>
         /// <returns></returns>

@@ -16,18 +16,10 @@
             <RowDefinition/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <StackPanel>
-            <TextBlock>Order</TextBlock>
-        </StackPanel>
-        <StackPanel Grid.Row="1">
-            <ListBox>
+        <TextBlock>Order</TextBlock>
+        <TextBlock Grid.Row="2">Subtotal</TextBlock>
+        <ListBox Grid.Row="1" ItemsSource="{Binding Path=Items}"></ListBox>
 
-            </ListBox>
-        </StackPanel>
-        <StackPanel Grid.Row="2">
-            <TextBlock>Subtotal</TextBlock>
-        </StackPanel>
-        
     </Grid>
 
 </UserControl>

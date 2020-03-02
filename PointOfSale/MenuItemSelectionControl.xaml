@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.OrderControl"
+﻿<UserControl x:Class="PointOfSale.MenuItemSelectionControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -51,8 +51,6 @@
             <ListBox Name="OrderList"/>
         </StackPanel>
 
-        <local:MenuItemSelectionControl Grid.Column="1" Grid.Row="0"></local:MenuItemSelectionControl>
-        <local:OrderSummaryControl></local:OrderSummaryControl>
 
     </Grid>
 </UserControl>

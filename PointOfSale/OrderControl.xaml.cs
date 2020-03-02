@@ -22,7 +22,6 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
-            AddPecosPulledPorkButton.Click += AddPecosPulledPorkButtonClick;
         }
 
         private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
@@ -32,7 +31,13 @@ namespace PointOfSale
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            if(DataContext is Order data)
+            {
+                if(sender is Button button)
+                {
+                    data.Add(new AngryChicken());
+                }
+            }
         }
 
         public void AddPecosPulledPorkButtonClick(object sender, RoutedEventArgs e)
