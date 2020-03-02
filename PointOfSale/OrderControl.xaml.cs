@@ -24,30 +24,71 @@ namespace PointOfSale
             InitializeComponent();
         }
 
-        private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new CowpokeChili());
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Button b = (Button)sender;
             if(DataContext is Order data)
             {
-                if(sender is Button button)
+                switch (b.Name)
                 {
-                    data.Add(new AngryChicken());
+                    case "AddAngryChickenButton":
+                        data.Add(new AngryChicken());
+                        break;
+
+                    case "AddCowpokeChiliButton":
+                        data.Add(new CowpokeChili());
+                        break;
+
+                    case "AddRustlersRibsButton":
+                        data.Add(new RustlersRibs());
+                        break;
+
+                    case "AddDakotaDoubleBurgerButton":
+                        data.Add(new DakotaDoubleBurger());
+                        break;
+
+                    case "AddTexasTripleBurgerButton":
+                        data.Add(new TexasTripleBurger());
+                        break;
+
+                    case "AddTrailBurgerButton":
+                        data.Add(new TrailBurger());
+                        break;
+
+                    case "AddPecosPulledPorkButton":
+                        data.Add(new PecosPulledPork());
+                        break;
+
+                    case "AddBakedBeansButton":
+                        data.Add(new BakedBeans());
+                        break;
+                    case "AddChiliCheeseFriesButton":
+                        data.Add(new ChiliCheeseFries());
+                        break;
+                    case "AddCornDodgersButton":
+                        data.Add(new CornDodgers());
+                        break;
+                    case "AddPanDeCampoButton":
+                        data.Add(new PanDeCampo());
+                        break;
+                    case "AddJerkedSodaButton":
+                        data.Add(new JerkedSoda());
+                        break;
+                    case "AddCowboyCoffeeButton":
+                        data.Add(new CowboyCoffee());
+                        break;
+                    case "AddTexasTeaButton":
+                        data.Add(new TexasTea());
+                        break;
+                    case "AddWaterButton":
+                        data.Add(new Water());
+                        break;
+
                 }
             }
+            
         }
 
-        public void AddPecosPulledPorkButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new PecosPulledPork());
-        }
-
-        public void AddCornDodgersButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

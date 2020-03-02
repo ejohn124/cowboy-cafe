@@ -66,5 +66,7 @@ namespace CowboyCafe.Data
         {
             return "Baked Beans";
         }
+
+        public override List<String> SpecialInstructions => throw new NotImplementedException();
     }
 }

@@ -66,5 +66,7 @@ namespace CowboyCafe.Data
         {
             return "Pan De Campo";
         }
+
+        public override List<String> SpecialInstructions => throw new NotImplementedException();
     }
 }

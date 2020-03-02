@@ -66,5 +66,7 @@ namespace CowboyCafe.Data
         {
             return "Corn Dodgers";
         }
+
+        public override List<String> SpecialInstructions => throw new NotImplementedException();
     }
 }

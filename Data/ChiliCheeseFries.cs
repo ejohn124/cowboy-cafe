@@ -65,5 +65,7 @@ namespace CowboyCafe.Data
         {
             return "Chili Cheese Fries";
         }
+
+        public override List<String> SpecialInstructions => throw new NotImplementedException();
     }
 }
