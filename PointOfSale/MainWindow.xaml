@@ -11,17 +11,7 @@
             <ColumnDefinition Width="600"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="65"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <DockPanel>
-            <Button Height="50" Width="100" HorizontalAlignment="Left">Item Selection</Button>
-            <Button Height="50" Width="100" HorizontalAlignment="Center">Cancel Order</Button>
-            <Button Height="50" Width="100" HorizontalAlignment="Right">Complete Order</Button>
-
-        </DockPanel>
-        <local:MenuItemSelectionControl Grid.Row="1"></local:MenuItemSelectionControl>
-        <local:OrderSummaryControl Grid.Row="1" Grid.Column="1"></local:OrderSummaryControl>
+        <local:OrderControl ></local:OrderControl>
+        <local:OrderSummaryControl Grid.Column="1"></local:OrderSummaryControl>
     </Grid>
 </Window>

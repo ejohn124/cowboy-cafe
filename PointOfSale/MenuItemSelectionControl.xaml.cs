@@ -11,6 +11,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using PointOfSale.CustomizationScreens;
+using PointOfSale.ExtensionMethods;
 
 namespace PointOfSale
 {
@@ -26,6 +28,7 @@ namespace PointOfSale
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             Button b = (Button)sender;
             if (DataContext is Order data)
             {
@@ -36,11 +39,17 @@ namespace PointOfSale
                         break;
 
                     case "AddCowpokeChiliButton":
-                        data.Add(new CowpokeChili());
+                        var item = new CowpokeChili();
+                        var screen = new CowpokeChiliCustomization();
+                        screen.DataContext = item;
+                        data.Add(item);
+                        
+                        orderControl?.SwapScreen(new CowpokeChiliCustomization());
                         break;
 
                     case "AddRustlersRibsButton":
                         data.Add(new RustlersRibs());
+
                         break;
 
                     case "AddDakotaDoubleBurgerButton":

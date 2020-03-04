@@ -19,6 +19,7 @@
         <TextBlock>Order</TextBlock>
         <TextBlock Grid.Row="2">Subtotal</TextBlock>
         <ListBox Grid.Row="1" ItemsSource="{Binding Path=Items}"></ListBox>
+        <ListView ItemsSource="{Binding Path =SpecialInstructions}" Grid.Row="1" Grid.Column="1"/>
 
     </Grid>
 
