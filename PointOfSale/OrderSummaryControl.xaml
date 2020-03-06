@@ -7,19 +7,31 @@
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="300">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height ="50"/>
             <RowDefinition/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
+
+        <ListBox>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                    <ListBox Grid.Row="1" ItemsSource="{Binding Path=Items}"></ListBox>
+                    <ListBox ItemsSource="{Binding Path =SpecialInstructions}" Grid.Row="1" Grid.Column="1"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        
+        <!--tbh i dont even know what this does but I'm here for it-->
         <TextBlock>Order</TextBlock>
         <TextBlock Grid.Row="2">Subtotal</TextBlock>
-        <ListBox Grid.Row="1" ItemsSource="{Binding Path=Items}"></ListBox>
-        <ListView ItemsSource="{Binding Path =SpecialInstructions}" Grid.Row="1" Grid.Column="1"/>
 
     </Grid>
 
