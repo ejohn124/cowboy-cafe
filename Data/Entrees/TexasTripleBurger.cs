@@ -178,7 +178,7 @@ namespace CowboyCafe.Data
             }
         }
 
-        private bool bacon = false;
+        private bool bacon = true;
         /// <summary>
         /// If the Texas Triple has bacon
         /// </summary>

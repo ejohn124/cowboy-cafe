@@ -114,6 +114,7 @@ namespace CowboyCafe.Data
 
                 if (!Ice) instructions.Add("Hold Ice");
                 if (lemon) instructions.Add("Add Lemon");
+                if (!sweet) instructions.Add("Unsweetend");
                 return instructions;
             }
         }
@@ -128,14 +129,19 @@ namespace CowboyCafe.Data
             switch (Size)
             {
                 case Size.Large:
-                    return "Large " + item;
+                    item = "Large " + item;
+                    break;
                 case Size.Medium:
-                    return "Medium " + item;
+                    item = "Medium " + item;
+                    break;
                 case Size.Small:
-                    return "Small " + item;
+                    item = "Small " + item;
+                    break;
                 default:
                     throw new NotImplementedException("Unknown size");
             }
+            if (!sweet) return "Unsweetend" + item;
+            return item;
         }
 
     }

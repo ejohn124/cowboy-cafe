@@ -12,6 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
 using PointOfSale.CustomizationScreens;
+using PointOfSale.CustomizationScreens.DrinkCustomization;
 using PointOfSale.ExtensionMethods;
 
 namespace PointOfSale
@@ -36,8 +37,14 @@ namespace PointOfSale
                 {
                         //Entrees
                     case "AddAngryChickenButton":
-                        data.Add(new AngryChicken());
-                        break;
+                        {
+                            var item = new AngryChicken();
+                            var screen = new AngryChickenCustomization();
+                            screen.DataContext = item;
+                            data.Add(item);
+                            orderControl?.SwapScreen(new AngryChickenCustomization());
+                            break;
+                        }
                     case "AddCowpokeChiliButton":
                         {
                             var item = new CowpokeChili();
@@ -60,14 +67,32 @@ namespace PointOfSale
                             break;
                         }                       
                     case "AddTexasTripleBurgerButton":
-                        data.Add(new TexasTripleBurger());
-                        break;
+                        {
+                            var item = new TexasTripleBurger();
+                            var screen = new TexasTripleCustomization();
+                            screen.DataContext = item;
+                            data.Add(item);
+                            orderControl?.SwapScreen(screen);
+                            break;
+                        }
                     case "AddTrailBurgerButton":
-                        data.Add(new TrailBurger());
-                        break;
+                        {
+                            var item = new TrailBurger();
+                            var screen = new TrailBurgerCustomization();
+                            screen.DataContext = item;
+                            data.Add(item);
+                            orderControl?.SwapScreen(new TrailBurgerCustomization());
+                            break;
+                        }
                     case "AddPecosPulledPorkButton":
-                        data.Add(new PecosPulledPork());
-                        break;
+                        {
+                            var item = new PecosPulledPork();
+                            var screen = new PecosPulledPorkCustomization();
+                            screen.DataContext = item;
+                            data.Add(item);
+                            orderControl?.SwapScreen(new PecosPulledPorkCustomization());
+                            break;
+                        }
 
                         //Sides
                     case "AddBakedBeansButton":
@@ -94,8 +119,15 @@ namespace PointOfSale
                         data.Add(new TexasTea());
                         break;
                     case "AddWaterButton":
-                        data.Add(new Water());
-                        break;
+                        {
+                            var item = new Water();
+                            var screen = new WaterCustomization();
+                            screen.DataContext = item;
+                            data.Add(item);
+                            orderControl?.SwapScreen(new WaterCustomization());
+                            break;
+                        }
+
 
                 }
             }
