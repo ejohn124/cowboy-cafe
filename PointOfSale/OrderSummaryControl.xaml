@@ -28,7 +28,7 @@
             <ListBox Grid.Column="0" ItemsSource="{Binding Path=Items}"/>
             
             <!--List of prices to go along with items-->
-            <ListBox Grid.Column="1" ItemsSource="{Binding Path=Subtotal}"/>
+            <ListBox Grid.Column="1" ItemsSource="{Binding Path=ItemPrices}"/>
 
 
         </Grid>

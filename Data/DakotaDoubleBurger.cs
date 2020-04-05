@@ -36,6 +36,8 @@ namespace CowboyCafe.Data
             }
         }
 
+
+        private bool pickle = true;
         /// <summary>
         /// If the Dakota Double has pickles
         /// </summary>

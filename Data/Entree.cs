@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
@@ -28,5 +29,7 @@ namespace CowboyCafe.Data
         /// Gets the special instructions for an entree
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

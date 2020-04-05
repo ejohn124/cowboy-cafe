@@ -35,5 +35,17 @@ namespace PointOfSale
             Container.Child = element;
         }
 
+        public void CancelOrder(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Order();
+            Container.Child = new MenuItemSelectionControl();
+        }
+
+        public void CompletedOrder(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Order();
+            Container.Child = new MenuItemSelectionControl();
+        }
+
     }
 }

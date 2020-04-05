@@ -5,13 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointOfSale"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="600"/>
             <ColumnDefinition/>
+
         </Grid.ColumnDefinitions>
         <local:OrderControl ></local:OrderControl>
-        <local:OrderSummaryControl Grid.Column="1"></local:OrderSummaryControl>
     </Grid>
 </Window>
