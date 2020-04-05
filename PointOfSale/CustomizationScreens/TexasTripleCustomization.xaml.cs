@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace PointOfSale.CustomizationScreens
 {
     /// <summary>
-    /// Interaction logic for Drink.xaml
+    /// Interaction logic for TexasTripleCustomization.xaml
     /// </summary>
-    public partial class DakotaDoubleCustomization : UserControl
+    public partial class TexasTripleCustomization : UserControl
     {
-        public DakotaDoubleCustomization()
+        public TexasTripleCustomization()
         {
             InitializeComponent();
         }

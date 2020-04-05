@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CowboyCafe.Data
@@ -12,17 +13,39 @@ namespace CowboyCafe.Data
     /// <summary>
     /// Class representing the Texas Tea drink
     /// </summary>
-    public class TexasTea: Drink
+    public class TexasTea: Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private bool sweet = true;
         /// <summary>
         /// If the tea is sweet
         /// </summary>
-        public bool Sweet { get; set; } = true;
+        public bool Sweet
+        {
+            get { return sweet; }
+            set
+            {
+                sweet = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sweet"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
+        private bool lemon = false;
         /// <summary>
         /// If the tea has lemon
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public bool Lemon
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// Calories of a Texas Tea
@@ -90,7 +113,7 @@ namespace CowboyCafe.Data
                 var instructions = new List<string>();
 
                 if (!Ice) instructions.Add("Hold Ice");
-                if (Lemon) instructions.Add("Add Lemon");
+                if (lemon) instructions.Add("Add Lemon");
                 return instructions;
             }
         }

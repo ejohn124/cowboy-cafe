@@ -39,18 +39,26 @@ namespace PointOfSale
                         data.Add(new AngryChicken());
                         break;
                     case "AddCowpokeChiliButton":
-                        var item = new CowpokeChili();
-                        var screen = new CowpokeChiliCustomization();
-                        screen.DataContext = item;
-                        data.Add(item);                        
-                        orderControl?.SwapScreen(new CowpokeChiliCustomization());
-                        break;
+                        {
+                            var item = new CowpokeChili();
+                            var screen = new CowpokeChiliCustomization();
+                            screen.DataContext = item;
+                            data.Add(item);
+                            orderControl?.SwapScreen(new CowpokeChiliCustomization());
+                            break;
+                        }
                     case "AddRustlersRibsButton":
                         data.Add(new RustlersRibs());
                         break;
                     case "AddDakotaDoubleBurgerButton":
-                        data.Add(new DakotaDoubleBurger());
-                        break;
+                        {
+                            var item = new DakotaDoubleBurger();
+                            var screen = new DakotaDoubleCustomization();
+                            screen.DataContext = item;
+                            data.Add(item);
+                            orderControl?.SwapScreen(new DakotaDoubleCustomization());
+                            break;
+                        }                       
                     case "AddTexasTripleBurgerButton":
                         data.Add(new TexasTripleBurger());
                         break;

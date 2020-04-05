@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="600">
     <Grid>
         <StackPanel>
-            <TextBlock FontSize="40">Customize this Chili!</TextBlock>
+            <TextBlock FontSize="40">Customize Cowpoke Chili</TextBlock>
             <StackPanel Orientation="Horizontal">
                 <CheckBox IsChecked="{Binding Path=Cheese}"/>
                 <TextBlock Text="Cheese"/>

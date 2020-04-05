@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace PointOfSale.CustomizationScreens
 {
     /// <summary>
-    /// Interaction logic for Drink.xaml
+    /// Interaction logic for TrailBurgerCustomization.xaml
     /// </summary>
-    public partial class DakotaDoubleCustomization : UserControl
+    public partial class TrailBurgerCustomization : UserControl
     {
-        public DakotaDoubleCustomization()
+        public TrailBurgerCustomization()
         {
             InitializeComponent();
         }

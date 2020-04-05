@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CowboyCafe.Data
@@ -12,8 +13,10 @@ namespace CowboyCafe.Data
     /// <summary>
     /// Class representing the Jerked Soda
     /// </summary>
-    public class JerkedSoda: Drink
+    public class JerkedSoda: Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Calories of a Jerked Soda
         /// </summary>
@@ -56,6 +59,7 @@ namespace CowboyCafe.Data
 
             }
         }
+
 
         /// <summary>
         /// Flavor of the Jerked Soda

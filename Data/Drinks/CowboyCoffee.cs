@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CowboyCafe.Data
@@ -12,20 +13,36 @@ namespace CowboyCafe.Data
     /// <summary>
     /// Class representing the Cowboy Coffee drink
     /// </summary>
-    public class CowboyCoffee: Drink
+    public class CowboyCoffee: Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        private bool roomForCream = false;
         /// <summary>
         /// If there is room for cream in the coffee
         /// </summary>
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream
+        {
+            get { return roomForCream; }
+            set
+            {
+                roomForCream = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RoomForCream"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         private bool decaf = false;
 
         public bool Decaf
         {
             get { return decaf; }
-            set { decaf = value; }
+            set
+            {
+                decaf = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Decaf"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         /// <summary>
@@ -72,10 +89,20 @@ namespace CowboyCafe.Data
             }
         }
 
+        private bool ice = false;
         /// <summary>
         /// If ice is added to the coffee
         /// </summary>
-        public override bool Ice { get; set; } = false;
+        public override bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// Special instructions for the preperation of a Cowboy Coffee
         /// </summary>
@@ -85,8 +112,9 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (Ice) instructions.Add("Add Ice");
-                if (RoomForCream) instructions.Add("Room for Cream");
+                if (ice) instructions.Add("Add Ice");
+                if (roomForCream) instructions.Add("Room for Cream");
+                if (decaf) instructions.Add("Decaf");
                 return instructions;
             }
         }
