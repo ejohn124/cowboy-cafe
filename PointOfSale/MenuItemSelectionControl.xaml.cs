@@ -34,40 +34,34 @@ namespace PointOfSale
             {
                 switch (b.Name)
                 {
+                        //Entrees
                     case "AddAngryChickenButton":
                         data.Add(new AngryChicken());
                         break;
-
                     case "AddCowpokeChiliButton":
                         var item = new CowpokeChili();
                         var screen = new CowpokeChiliCustomization();
                         screen.DataContext = item;
-                        data.Add(item);
-                        
+                        data.Add(item);                        
                         orderControl?.SwapScreen(new CowpokeChiliCustomization());
                         break;
-
                     case "AddRustlersRibsButton":
                         data.Add(new RustlersRibs());
-
                         break;
-
                     case "AddDakotaDoubleBurgerButton":
                         data.Add(new DakotaDoubleBurger());
                         break;
-
                     case "AddTexasTripleBurgerButton":
                         data.Add(new TexasTripleBurger());
                         break;
-
                     case "AddTrailBurgerButton":
                         data.Add(new TrailBurger());
                         break;
-
                     case "AddPecosPulledPorkButton":
                         data.Add(new PecosPulledPork());
                         break;
 
+                        //Sides
                     case "AddBakedBeansButton":
                         data.Add(new BakedBeans());
                         break;
@@ -80,6 +74,8 @@ namespace PointOfSale
                     case "AddPanDeCampoButton":
                         data.Add(new PanDeCampo());
                         break;
+
+                        //Drinks
                     case "AddJerkedSodaButton":
                         data.Add(new JerkedSoda());
                         break;

@@ -18,6 +18,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
+        <!--Entrees-->
         <StackPanel>
             <TextBlock TextAlignment="Center">Entrees</TextBlock>
             <Button Name="AddAngryChickenButton" Click="Button_Click">AngryChicken</Button>
@@ -29,6 +30,7 @@
             <Button Name="AddTexasTripleBurgerButton" Click="Button_Click">Texas Triple Burger</Button>
         </StackPanel>
 
+        <!--Sides-->
         <StackPanel Grid.Column="1">
             <TextBlock TextAlignment="Center">Side</TextBlock>
             <Button Name="AddBakedBeansButton" Click="Button_Click">Baked Beans</Button>
@@ -37,6 +39,7 @@
             <Button Name="AddPanDeCampoButton" Click="Button_Click">Pan De Campo</Button>
         </StackPanel>
 
+        <!--Drinks-->
         <StackPanel Grid.Column="2">
             <TextBlock TextAlignment="Center">Drink</TextBlock>
             <Button Name="AddJerkedSodaButton">Jerked Soda</Button>
