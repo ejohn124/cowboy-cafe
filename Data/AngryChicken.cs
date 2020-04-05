@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CowboyCafe.Data
@@ -12,9 +13,9 @@ namespace CowboyCafe.Data
     /// <summary>
     /// Class representing the Angry Chicken entree
     /// </summary>
-    public class AngryChicken: Entree
+    public class AngryChicken: Entree, INotifyPropertyChanged
     {
-
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Price of Angry Chicken
         /// </summary>
@@ -37,10 +38,21 @@ namespace CowboyCafe.Data
             }
         }
 
+
+        private bool pickle = true;
         /// <summary>
         /// If the Angry Chicken has pickle
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public bool Pickle
+        {
+            get { return pickle; }
+            set
+            {
+                pickle = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         private bool bread = true;
 
@@ -50,7 +62,12 @@ namespace CowboyCafe.Data
         public bool Bread
         {
             get { return bread; }
-            set { bread = value; }
+            set
+            {
+                bread = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bread"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         /// <summary>
@@ -63,7 +80,7 @@ namespace CowboyCafe.Data
                 var instructions = new List<string>();
 
                 if (!bread) instructions.Add("hold bread");
-                if (!Pickle) instructions.Add("hold pickle");
+                if (!pickle) instructions.Add("hold pickle");
 
                 return instructions;
             }

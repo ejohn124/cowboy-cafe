@@ -30,6 +30,5 @@ namespace CowboyCafe.Data
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

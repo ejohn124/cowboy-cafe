@@ -20,6 +20,14 @@ namespace CowboyCafe.Data
         /// </summary>
         public bool RoomForCream { get; set; } = false;
 
+        private bool decaf = false;
+
+        public bool Decaf
+        {
+            get { return decaf; }
+            set { decaf = value; }
+        }
+
         /// <summary>
         /// Calories of Coffee
         /// </summary>
@@ -89,7 +97,30 @@ namespace CowboyCafe.Data
         /// <returns></returns>
         public override string ToString()
         {
-            return "Cowboy Coffee";
+            string completedDrink;
+            switch (Size)
+            {
+                case Size.Large:
+                    completedDrink = "Large Cowboy Coffee";
+                    break;
+                case Size.Medium:
+                    completedDrink = "Medium Cowboy Coffee";
+                    break;
+                case Size.Small:
+                    completedDrink = "Small Cowboy Coffee";
+                    break;
+                default:
+                    throw new NotImplementedException("Unknown size");
+            }
+
+            if (!decaf)
+            {
+                return completedDrink;
+            }
+            else
+            {
+                return "Decaf " + completedDrink;
+            }
         }
 
     }

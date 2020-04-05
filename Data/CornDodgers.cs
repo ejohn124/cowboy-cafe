@@ -64,7 +64,17 @@ namespace CowboyCafe.Data
         /// <returns></returns>
         public override string ToString()
         {
-            return "Corn Dodgers";
+            switch (Size)
+            {
+                case Size.Large:
+                    return "Large Corn Dodgers";
+                case Size.Medium:
+                    return "Medium Corn Dodgers";
+                case Size.Small:
+                    return "Small Corn Dodgers";
+                default:
+                    throw new NotImplementedException("Unknown size");
+            }
         }
 
         public override List<String> SpecialInstructions => throw new NotImplementedException();

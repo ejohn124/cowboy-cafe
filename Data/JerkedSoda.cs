@@ -82,7 +82,42 @@ namespace CowboyCafe.Data
         /// <returns></returns>
         public override string ToString()
         {
-            return "Jerked Soda";
+            string completedDrink = "Jerked Soda";
+            switch (Flavor)
+            {
+                case SodaFlavor.CreamSoda:
+                    completedDrink = "Cream Soda " + completedDrink;
+                    break;
+                case SodaFlavor.OrangeSoda:
+                    completedDrink = "Orange Soda" + completedDrink;
+                    break;
+                case SodaFlavor.Sarsparilla:
+                    completedDrink = "Sarsparilla " + completedDrink;
+                    break;
+                case SodaFlavor.RootBeer:
+                    completedDrink = "Root Beer " + completedDrink;
+                    break;
+                case SodaFlavor.BirchBeer:
+                    completedDrink = "Birch Beer " + completedDrink;
+                    break;
+            }
+            switch (Size)
+            {
+                case Size.Large:
+                    completedDrink = "Large " + completedDrink;
+                    break;
+                case Size.Medium:
+                    completedDrink = "Medium " + completedDrink;
+                    break;
+                case Size.Small:
+                    completedDrink = "Small " + completedDrink;
+                    break;
+                default:
+                    throw new NotImplementedException("Unknown size");
+            }
+
+
+            return completedDrink;
         }
 
     }

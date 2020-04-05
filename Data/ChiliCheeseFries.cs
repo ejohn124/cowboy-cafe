@@ -63,7 +63,17 @@ namespace CowboyCafe.Data
         /// <returns></returns>
         public override string ToString()
         {
-            return "Chili Cheese Fries";
+            switch (Size)
+            {
+                case Size.Large:
+                    return "Large Chili Cheese Fries";
+                case Size.Medium:
+                    return "Medium Chili Cheese Fries";
+                case Size.Small:
+                    return "Small Chili Cheese Fries";
+                default:
+                    throw new NotImplementedException("Unknown size");
+            }
         }
 
         public override List<String> SpecialInstructions => throw new NotImplementedException();

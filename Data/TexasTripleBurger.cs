@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CowboyCafe.Data
@@ -12,8 +13,9 @@ namespace CowboyCafe.Data
     /// <summary>
     /// Class representing the Texas Triple Burger entree
     /// </summary>
-    public class TexasTripleBurger: Entree
+    public class TexasTripleBurger: Entree, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Price of the Texas Triple
         /// </summary>

@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CowboyCafe.Data
@@ -12,8 +13,9 @@ namespace CowboyCafe.Data
     /// <summary>
     /// Class representing Pecos Pulled Pork entree
     /// </summary>
-    public class PecosPulledPork: Entree
+    public class PecosPulledPork: Entree, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Price of Pecos Pulled Pork
         /// </summary>
@@ -36,15 +38,35 @@ namespace CowboyCafe.Data
             }
         }
 
+        private bool pickle = true;
         /// <summary>
         /// If Pecos Pulled Pork has pickles
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public bool Pickle
+        {
+            get { return pickle; }
+            set
+            {
+                pickle = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
+        private bool bread = true;
         /// <summary>
         /// If Pecos Pulled Pork has bread
         /// </summary>
-        public bool Bread { get; set; } = true;
+        public bool Bread
+        {
+            get { return bread; }
+            set
+            {
+                bread = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bread"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// Special instructions for the preparation for Pecos Pulled Pork
@@ -55,8 +77,8 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!Bread) instructions.Add("hold bread");
-                if (!Pickle) instructions.Add("hold pickle");
+                if (!bread) instructions.Add("hold bread");
+                if (!pickle) instructions.Add("hold pickle");
 
                 return instructions;
             }
