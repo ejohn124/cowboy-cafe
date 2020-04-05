@@ -42,7 +42,7 @@ namespace PointOfSale
                             var screen = new AngryChickenCustomization();
                             screen.DataContext = item;
                             data.Add(item);
-                            orderControl?.SwapScreen(new AngryChickenCustomization());
+                            orderControl?.SwapScreen(screen);
                             break;
                         }
                     case "AddCowpokeChiliButton":
@@ -51,7 +51,7 @@ namespace PointOfSale
                             var screen = new CowpokeChiliCustomization();
                             screen.DataContext = item;
                             data.Add(item);
-                            orderControl?.SwapScreen(new CowpokeChiliCustomization());
+                            orderControl?.SwapScreen(screen);
                             break;
                         }
                     case "AddRustlersRibsButton":
@@ -63,7 +63,7 @@ namespace PointOfSale
                             var screen = new DakotaDoubleCustomization();
                             screen.DataContext = item;
                             data.Add(item);
-                            orderControl?.SwapScreen(new DakotaDoubleCustomization());
+                            orderControl?.SwapScreen(screen);
                             break;
                         }                       
                     case "AddTexasTripleBurgerButton":
@@ -81,7 +81,7 @@ namespace PointOfSale
                             var screen = new TrailBurgerCustomization();
                             screen.DataContext = item;
                             data.Add(item);
-                            orderControl?.SwapScreen(new TrailBurgerCustomization());
+                            orderControl?.SwapScreen(screen);
                             break;
                         }
                     case "AddPecosPulledPorkButton":
@@ -90,7 +90,7 @@ namespace PointOfSale
                             var screen = new PecosPulledPorkCustomization();
                             screen.DataContext = item;
                             data.Add(item);
-                            orderControl?.SwapScreen(new PecosPulledPorkCustomization());
+                            orderControl?.SwapScreen(screen);
                             break;
                         }
 
@@ -124,7 +124,7 @@ namespace PointOfSale
                             var screen = new WaterCustomization();
                             screen.DataContext = item;
                             data.Add(item);
-                            orderControl?.SwapScreen(new WaterCustomization());
+                            orderControl?.SwapScreen(screen);
                             break;
                         }
 

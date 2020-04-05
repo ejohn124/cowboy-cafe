@@ -21,6 +21,7 @@
                 <CheckBox IsChecked="{Binding Path=Sweet}"/>
                 <TextBlock Text="Sweet"/>
             </StackPanel>
+            <RadioButton IsChecked="{Binding Path=Small}"></RadioButton>
         </StackPanel>
             
     </Grid>
