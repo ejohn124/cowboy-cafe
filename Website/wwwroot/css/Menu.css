@@ -1,0 +1,30 @@
+﻿.menu-item{
+    text-align:left;
+}
+
+.item-header{
+    font-size: 2rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.column{
+    float:left;
+    width:30%
+
+}
+
+.menu-colums:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.item-name{
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+ul{
+    list-style-type: none;
+}
+

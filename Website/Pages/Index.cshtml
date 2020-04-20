@@ -4,9 +4,9 @@
     ViewData["Title"] = "Home page";
 }
 @using CowboyCafe.Data
+<link rel="stylesheet" type="text/css" href="~/css/Menu.css"/>
     <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <h1>Cowboy Cafe</h1>
+        <h1 class="display-4">Welcome to the Cowboy Cafe!</h1>
         <p>
             We at Cowboy Cafe are proud to bring you authentic trail meals from the American West.
             Shake off the dust on your boots and sake your thirst with one of our old-fashioned
@@ -14,44 +14,56 @@
             Or conquer the the mighty Texas Triple Burger!
             You’ve had a hard ride - so take it easy with us.
         </p>
-        <h2 class="item-header">Entrees</h2>
-        <ul>
-            @foreach (Entree e in new Menu().Entrees())
-            {
-                <li>
-                    <div class="menu-item">
-                        <h3 class="item-name">@e.ToString()</h3>
-                        <div class="item-num">@e.Price</div>
-                        <div class="item-num">@e.Calories</div>
-                    </div>
-                </li>
+        <div class="menu-columns">
+            <div class="column">
+                <h2 class="item-header">Entrees</h2>
+                <ul>
+                    @foreach (Entree e in new Menu().Entrees())
+                    {
+                    <li>
+                        <div class="menu-item">
+                            <h3 class="item-name">@e.ToString()</h3>
+                            <div class="item-num">Price: $@e.Price</div>
+                            <div class="item-num">Calories: @e.Calories</div>
+                        </div>
+                    </li>
+                    }
+                </ul>
+            </div>
+            <div class="column">
+                <h2 class="item-header">Sides</h2>
+                <ul>
+                    @foreach (Side s in new Menu().Sides())
+                    {
+                    <li>
+                        <div class="menu-item">
+                            <h3 class="item-name">@s.ToString()</h3>
+                            <div>Price: $@s.Price</div>
+                            <div>Calories: @s.Calories</div>
+                        </div>
+                    </li>
+                    }
+                </ul>
+            </div>
+            <div class="column">
+                <h2 class="item-header">Drinks</h2>
+                <ul>
+                    @foreach (Drink d in new Menu().Drinks())
+                    {
+                    <li>
+                        <div class="menu-item">
+                            <h3 class="item-name">@d.ToString()</h3>
+                            <div>Price: $@d.Price</div>
+                            <div>Calories: @d.Calories</div>
+                        </div>
+                    </li>
+                    }
+                </ul>
+            </div>
+           
+            
+            
+        </div>
 
-            }
-        </ul>
-        <h2>Sides</h2>
-        <ul>
-            @foreach (Side s in new Menu().Sides())
-            {
-                <li>
-                    <div class="menu-item">
-                        <h3 class="item-name">@s.ToString()</h3>
-                        <div>@s.Price</div>
-                        <div>@s.Calories</div>
-                    </div>
-                </li>
-            }
-        </ul>
-        <h2>Drinks</h2>
-        <ul>
-            @foreach (Drink d in new Menu().Drinks())
-            {
-                <li>
-                    <div class="menu-item">
-                        <h3>@d.ToString()</h3>
-                        <div>@d.Price</div>
-                        <div>@d.Calories</div>
-                    </div>
-                </li>
-            }
-        </ul>
+        
     </div>
